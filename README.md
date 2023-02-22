@@ -1,4 +1,4 @@
-# TEA: Temporal Excitation and Aggregation for Action Recognition (CVPR2020)
+# 面向视频行为识别深度模型的数据预处理方法
 
 The PyTorch code of the [TEA Module](https://arxiv.org/abs/2004.01398).
 
