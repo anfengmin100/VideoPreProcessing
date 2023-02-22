@@ -1,6 +1,4 @@
-# 面向视频行为识别深度模型的数据预处理方法
-
-The PyTorch code of the [TEA Module](https://arxiv.org/abs/2004.01398).
+# A Data Preprocessing Method for Video Action Recognition Depth Models
 
 ### Requirements
 
@@ -18,7 +16,7 @@ A list file is utilized to specify the video data information, including a tuple
 ```
 Finally, the absolute path of your own generated list files should be added into `ops/dataset_configs.py`
 
-### Training TEA
+### Training
 
 We have provided several examples for training TEA models on different datasets. Please refer to the Appendix B of [our paper](https://arxiv.org/abs/2004.01398) for more training details.
 
@@ -44,8 +42,4 @@ bash ./scripts/single_test_tea_something_rgb_8f.sh
 bash ./scripts/multi_test_tea_something_rgb_8f.sh
 ```
 
-### Pre-trained Models
 
-Currently, we do not provide the original pre-trained models on STHV1, STHV2, and Kinetics, since we have reorganized the structure of the codes and renamed the modules of TEA for public release. The old models cannot be loaded with new names. We plan to retrain the models with the new codes and release the models for evaluation.
-
-The released codes are verified, and you will get a similar performance with our paper if you have followed the exact training settings of TEA ([issue 2](https://github.com/Phoenix1327/tea-action-recognition/issues/2) and [issue 4](https://github.com/Phoenix1327/tea-action-recognition/issues/4)).
