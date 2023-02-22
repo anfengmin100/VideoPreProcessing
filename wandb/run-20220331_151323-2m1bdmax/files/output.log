@@ -1,0 +1,72 @@
+something: 174 classes
+[32m[03/31 15:13:33 TDN]: [39mstoring name: TDN__something_RGB_tea50_avg_segment8_e50
+Initializing TSN with base model: tea50.
+                      TSN Configurations:
+                      input_modality:     RGB
+                      num_segments:       8
+                      new_length:         1
+                      consensus_module:   avg
+                      dropout_ratio:      0.5
+                      img_feature_dim:    256
+=> base model: tea50
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: first_conv_weight has 1 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: first_conv_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: normal_weight has 196 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: normal_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: BN scale/shift has 234 params, lr_mult: 1, decay_mult: 0
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: IN scale/shift has 0 params, lr_mult: 1, decay_mult: 0
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: custom_ops has 0 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: lr5_weight has 1 params, lr_mult: 5, decay_mult: 1
+[32m[03/31 15:13:37 TDN]: [39m[TDN-tea50]group: lr10_bias has 1 params, lr_mult: 10, decay_mult: 0
+#################### NO FLIP!!!
+video number:86017
+video number:11522
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torchvision/transforms/transforms.py:280: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  warnings.warn(
+torch.Size([4, 24, 112, 112])
+[32m[03/31 15:13:40 TDN]: [39mEpoch: [0][0/21504], lr: 0.02000	Time 2.046 (2.046)	Data 1.206 (1.206)	Loss 5.1546 (5.1546)	Prec@1 0.000 (0.000)	Prec@5 0.000 (0.000)
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+[W reducer.cpp:1158] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+[32m[03/31 15:13:42 TDN]: [39mEpoch: [0][20/21504], lr: 0.02000	Time 0.126 (0.217)	Data 0.000 (0.058)	Loss 5.6856 (5.6344)	Prec@1 0.000 (0.000)	Prec@5 0.000 (1.190)
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])
+torch.Size([4, 24, 112, 112])

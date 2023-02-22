@@ -1,0 +1,41 @@
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torchvision/transforms/transforms.py:280: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  warnings.warn(
+something: 174 classes
+[32m[03/28 16:18:11 TDN]: [39mstoring name: TDN__something_RGB_tea50_avg_segment8_e50
+Initializing TSN with base model: tea50.
+                      TSN Configurations:
+                      input_modality:     RGB
+                      num_segments:       8
+                      new_length:         1
+                      consensus_module:   avg
+                      dropout_ratio:      0.5
+                      img_feature_dim:    256
+=> base model: tea50
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: first_conv_weight has 1 params, lr_mult: 1, decay_mult: 1
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: first_conv_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: normal_weight has 196 params, lr_mult: 1, decay_mult: 1
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: normal_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: BN scale/shift has 234 params, lr_mult: 1, decay_mult: 0
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: IN scale/shift has 0 params, lr_mult: 1, decay_mult: 0
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: custom_ops has 0 params, lr_mult: 1, decay_mult: 1
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: lr5_weight has 1 params, lr_mult: 5, decay_mult: 1
+[32m[03/28 16:18:15 TDN]: [39m[TDN-tea50]group: lr10_bias has 1 params, lr_mult: 10, decay_mult: 0
+#################### NO FLIP!!!
+video number:86017
+video number:11522
+[32m[03/28 16:18:18 TDN]: [39mEpoch: [0][0/5376], lr: 0.00500	Time 2.430 (2.430)	Data 0.930 (0.930)	Loss 5.1562 (5.1562)	Prec@1 6.250 (6.250)	Prec@5 12.500 (12.500)
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+[W reducer.cpp:1158] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[32m[03/28 16:18:21 TDN]: [39mEpoch: [0][20/5376], lr: 0.00500	Time 0.178 (0.285)	Data 0.000 (0.044)	Loss 5.3438 (5.1667)	Prec@1 0.000 (1.190)	Prec@5 0.000 (4.167)
+[32m[03/28 16:18:25 TDN]: [39mEpoch: [0][40/5376], lr: 0.00500	Time 0.178 (0.234)	Data 0.000 (0.023)	Loss 5.2646 (5.1944)	Prec@1 0.000 (0.762)	Prec@5 6.250 (3.963)
+[32m[03/28 16:18:28 TDN]: [39mEpoch: [0][60/5376], lr: 0.00500	Time 0.177 (0.215)	Data 0.000 (0.015)	Loss 5.0262 (5.1864)	Prec@1 6.250 (0.922)	Prec@5 12.500 (4.406)
+[32m[03/28 16:18:32 TDN]: [39mEpoch: [0][80/5376], lr: 0.00500	Time 0.180 (0.207)	Data 0.000 (0.012)	Loss 5.1192 (5.1737)	Prec@1 6.250 (1.003)	Prec@5 12.500 (4.861)
+[32m[03/28 16:18:36 TDN]: [39mEpoch: [0][100/5376], lr: 0.00500	Time 0.177 (0.202)	Data 0.000 (0.009)	Loss 5.0851 (5.1606)	Prec@1 0.000 (0.990)	Prec@5 6.250 (4.889)
+[32m[03/28 16:18:39 TDN]: [39mEpoch: [0][120/5376], lr: 0.00500	Time 0.174 (0.198)	Data 0.000 (0.008)	Loss 5.1445 (5.1567)	Prec@1 0.000 (0.878)	Prec@5 0.000 (4.752)
+[32m[03/28 16:18:43 TDN]: [39mEpoch: [0][140/5376], lr: 0.00500	Time 0.176 (0.195)	Data 0.000 (0.007)	Loss 5.0240 (5.1508)	Prec@1 0.000 (0.798)	Prec@5 0.000 (4.521)
+[32m[03/28 16:18:46 TDN]: [39mEpoch: [0][160/5376], lr: 0.00500	Time 0.179 (0.193)	Data 0.000 (0.006)	Loss 4.9946 (5.1429)	Prec@1 6.250 (0.893)	Prec@5 12.500 (4.503)
+[32m[03/28 16:18:50 TDN]: [39mEpoch: [0][180/5376], lr: 0.00500	Time 0.175 (0.192)	Data 0.000 (0.005)	Loss 5.2533 (5.1425)	Prec@1 6.250 (0.863)	Prec@5 6.250 (4.282)
+[32m[03/28 16:18:54 TDN]: [39mEpoch: [0][200/5376], lr: 0.00500	Time 0.185 (0.191)	Data 0.000 (0.005)	Loss 5.1135 (5.1385)	Prec@1 0.000 (0.902)	Prec@5 6.250 (4.322)

@@ -1,0 +1,29 @@
+something: 174 classes
+[32m[03/31 14:59:47 TDN]: [39mstoring name: TDN__something_RGB_tea50_avg_segment8_e50
+Initializing TSN with base model: tea50.
+                      TSN Configurations:
+                      input_modality:     RGB
+                      num_segments:       8
+                      new_length:         1
+                      consensus_module:   avg
+                      dropout_ratio:      0.5
+                      img_feature_dim:    256
+=> base model: tea50
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: first_conv_weight has 1 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: first_conv_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: normal_weight has 196 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: normal_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: BN scale/shift has 234 params, lr_mult: 1, decay_mult: 0
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: IN scale/shift has 0 params, lr_mult: 1, decay_mult: 0
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: custom_ops has 0 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: lr5_weight has 1 params, lr_mult: 5, decay_mult: 1
+[32m[03/31 14:59:51 TDN]: [39m[TDN-tea50]group: lr10_bias has 1 params, lr_mult: 10, decay_mult: 0
+#################### NO FLIP!!!
+Traceback (most recent call last):
+  File "/media/zhang/DATA/AFM/TEA/main.py", line 384, in <module>
+    main()
+  File "/media/zhang/DATA/AFM/TEA/main.py", line 96, in main
+    train_dataset = TSNDataSet(args.dataset_root_path,
+  File "/media/zhang/DATA/AFM/TEA/ops/dataset.py", line 71, in __init__
+    self.temp_transform = temp_transform() # for snip sampling
+TypeError: __call__() missing 1 required positional argument: 'data'

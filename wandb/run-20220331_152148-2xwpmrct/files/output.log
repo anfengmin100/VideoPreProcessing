@@ -1,0 +1,55 @@
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torchvision/transforms/transforms.py:280: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  warnings.warn(
+something: 174 classes
+[32m[03/31 15:21:55 TDN]: [39mstoring name: TDN__something_RGB_tea50_avg_segment8_e50
+Initializing TSN with base model: tea50.
+                      TSN Configurations:
+                      input_modality:     RGB
+                      num_segments:       8
+                      new_length:         1
+                      consensus_module:   avg
+                      dropout_ratio:      0.5
+                      img_feature_dim:    256
+=> base model: tea50
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: first_conv_weight has 1 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: first_conv_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: normal_weight has 196 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: normal_bias has 0 params, lr_mult: 2, decay_mult: 0
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: BN scale/shift has 234 params, lr_mult: 1, decay_mult: 0
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: IN scale/shift has 0 params, lr_mult: 1, decay_mult: 0
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: custom_ops has 0 params, lr_mult: 1, decay_mult: 1
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: lr5_weight has 1 params, lr_mult: 5, decay_mult: 1
+[32m[03/31 15:21:59 TDN]: [39m[TDN-tea50]group: lr10_bias has 1 params, lr_mult: 10, decay_mult: 0
+#################### NO FLIP!!!
+video number:86017
+video number:11522
+Traceback (most recent call last):
+  File "/media/zhang/DATA/AFM/TEA/main.py", line 384, in <module>
+    main()
+  File "/media/zhang/DATA/AFM/TEA/main.py", line 228, in main
+    train_loss, train_top1, train_top5 = train(train_loader, model, criterion, optimizer, epoch=epoch, logger=logger, scheduler=scheduler)
+  File "/media/zhang/DATA/AFM/TEA/main.py", line 277, in train
+    for i, (input, target) in enumerate(train_loader):
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/_utils.py", line 425, in reraise
+    raise self.exc_type(msg)
+AttributeError: Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/zhang/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/media/zhang/DATA/AFM/TEA/ops/dataset.py", line 196, in __getitem__
+    return self.get(record, segment_indices)
+  File "/media/zhang/DATA/AFM/TEA/ops/dataset.py", line 210, in get
+    seg_imgs = self._load_image(os.path.join(self.data_root + '/'+record.path.strip().split('/')[-1]), p)
+AttributeError: 'TSNDataSet' object has no attribute 'data_root'
